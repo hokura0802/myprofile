@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/* 
+GENERAL STYLING
+====================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    font-family: sans-serif;
+    background: linear-gradient(#F7CD39,#67BFD5) ;
+
+}
+/* 
+COMMON 
+===================================================================*/
+p {
+    line-height: 1.7;
+}
+img {
+    max-width: 100%;
+}
+h2 {
+    background: linear-gradient(#fff, #FFEB7F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    margin: 5rem 0 2rem;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+}
+h1,
+h2 {
+    text-align: center;
+}
+
+/* Layout */
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/*
+HEADER
+================================================ */
+header {
+    background: rgba(71,81,299,.7);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header a {
+    color: #fff;
+    font-size: 1.5rem;
+}
+.btn-menu {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: 1px solid rgba(255,255,255,.5);
+    color: #fff;
+    padding: .5rem 1rem;
+}
+.main-nav {
+    background: rgba(71,81,299,.7);
+    width: 0;
+    margin-top: .6rem;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    right: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.main-nav li {
+    text-align: center;
+    margin: 2rem 0;
+}
+.main-nav a {
+    display: block;
+}
+.main-nav.open-menu {
+    
+    width: 100%;
+}
+
+/*
+TOP
+===================================================*/
+#top {
+    background-image: url(./img/top\ 950.jpg);
+    background-position: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+#top h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 15rem;
+    color: rgb(71, 89, 229);
+}
+
+/* 
+About
+========================================- */
+#about img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    line-height: 1.8rem;
+    font-size: 1.25rem;
+}
+dl dt {
+    width: 30%;
+}
+dl dd {
+    width: 70%;
+}
+/* 
+skill
+================================================ */
+.skill-img {
+    text-align: center;
+}
+#skill img {
+    width: 36%;
+
+}
+
+
+/* 
+works
+================================================ */
+.grid {
+    display: grid;
+    width: 94vw;
+    margin: 0 auto 3vw;
+    gap: 2vw;
+    grid-template-columns: repeat(2, 46vw);
+    grid-template-rows: repeat(3, 46vw);
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* 
+fotter
+================================================ */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    background-color: rgba(71, 89, 229,.7);
+    color: #fff;
+    font-size: 16px;
+}
+footer small {
+    width: 100%;
+    text-align: center;
+}
+
+/* 
+media
+================================================== */
+@media (min-width:750px) { 
+/* common */
+    h2 {
+        font-size: 6rem;
+    }
+
+/* header */
+
+
+/* top */
+    #top h1 {
+        font-size: 8rem;
+        padding-top: 18rem;
+    }
+/* about */
+    .profile {
+        display: flex;
+        font-size: 2rem;
+    }
+    #about img {
+        width:40%;
+        padding: 0 2rem;
+    }
+    
+/* grid */
+    .grid {
+        width: 80vw;
+        gap: 1vw;
+        grid-template-columns: repeat(3, 26vw);
+        grid-template-rows: repeat(2, 26vw);
+    }
+}
